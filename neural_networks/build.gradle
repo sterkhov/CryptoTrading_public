@@ -1,0 +1,7 @@
+dependencies {
+    compile libraries.scalafx
+
+    compile project(':common_kafka')
+    compile project(':common_trade')
+    compile project(':mongo_storage')
+}

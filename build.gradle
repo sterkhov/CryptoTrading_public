@@ -1,0 +1,76 @@
+plugins {
+    id 'java'
+}
+
+group 'ru.broom'
+version '1.0-SNAPSHOT'
+
+subprojects {
+    apply plugin: 'scala'
+    apply plugin: 'application'
+    sourceCompatibility = 1.8
+    compileJava.options.encoding = 'UTF-8'
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+    }
+    repositories {
+        mavenCentral()
+        jcenter()
+        flatDir {
+            dirs '../libs'
+        }
+    }
+    dependencies {
+        compile 'org.scala-lang:scala-library:2.13.3'
+        testImplementation 'org.scalatest:scalatest_2.13:3.2.3'
+        testImplementation 'org.scalatestplus:junit-4-13_2.13:3.2.8.0'
+    }
+}
+
+ext {
+    versions = [
+            rxscala                      : '2.13:0.27.0',
+            telebram_bot_api             : '4.9.0',
+            converter_jackson            : '2.7.2',
+            commons_lang3                : '3.12.0',
+            commons_codec                : '1.9',
+            kafka                        : '2.8.0',
+            jackson_databind             : '2.12.3',
+            telebram_bot_api             : '4.9.0',
+            derby                        : '10.14.2.0',
+            scalafx                      : '2.13:16.0.0-R24',
+            scalafxml                    : '2.13:0.5',
+            rabbitmq                     : '5.12.0',
+            mongodb                      : '3.10.1',
+            bson                         : '3.12.5',
+            junit                        : '4.13',
+            httpcomponents               : '4.5.12',
+            jackson_annotations          : "2.11.1",
+            scalafx                      : '2.13:16.0.0-R24',
+            sttp                         : 'core_2.13:3.3.7'
+    ]
+
+    libraries = [
+            rxscala                      : "io.reactivex:rxscala_$versions.rxscala",
+            telebram_bot_api             : "com.github.pengrad:java-telegram-bot-api:$versions.telebram_bot_api",
+            converter_jackson            : "com.squareup.retrofit2:converter-jackson:$versions.converter_jackson",
+            commons_lang3                : "org.apache.commons:commons-lang3:$versions.commons_lang3",
+            commons_codec                : "commons-codec:commons-codec:$versions.commons_codec",
+            kafka_clients                : "org.apache.kafka:kafka-clients:$versions.kafka",
+            kafka_connect_json           : "org.apache.kafka:connect-json:$versions.kafka",
+            jackson_databind             : "com.fasterxml.jackson.core:jackson-databind:$versions.jackson_databind",
+            telebram_bot_api             : "com.github.pengrad:java-telegram-bot-api:$versions.telebram_bot_api",
+            derby                        : "org.apache.derby:derby:$versions.derby",
+            scalafx                      : "org.scalafx:scalafx_$versions.scalafx",
+            scalafxml                    : "org.scalafx:scalafxml-core-sfx8_$versions.scalafxml",
+            rabbitmq                     : "com.rabbitmq:amqp-client:$versions.rabbitmq",
+            mongodb                      : "org.mongodb:mongodb-driver-sync:$versions.mongodb",
+            bson                         : "org.mongodb:bson:$versions.bson",
+            junit                        : "junit:junit:$versions.junit",
+            httpcomponents               : "org.apache.httpcomponents:httpclient:$versions.httpcomponents",
+            jackson_annotations          :  "com.fasterxml.jackson.core:jackson-annotations:$versions.jackson_annotations",
+            sttp                         : "com.softwaremill.sttp.client3:$versions.sttp"
+    ]
+}
+
+

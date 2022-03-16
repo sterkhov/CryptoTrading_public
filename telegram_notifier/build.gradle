@@ -1,0 +1,4 @@
+dependencies {
+    compile libraries.telebram_bot_api
+    compile libraries.derby
+}

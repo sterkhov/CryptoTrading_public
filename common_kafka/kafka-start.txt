@@ -1,0 +1,3 @@
+zookeeper-server-start.bat ..\..\config\zookeeper.properties
+kafka-server-start.bat ..\..\config\server.properties
+kafka-console-consumer.bat --topic binance-prices --from-beginning --bootstrap-server localhost:9092

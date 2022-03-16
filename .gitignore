@@ -1,0 +1,17 @@
+/.gradle/*
+/.idea/*
+/binance_kafka_stream/build
+/common_kafka_stream/build
+/common/build
+# Project exclude paths
+/binance_api/build/
+/binance_kafka_producer/build/
+/common_kafka/build/
+/common_rabbitmq/build/
+/common_trade/build/
+/currencies_listing_catcher/build/
+/mongo_storage/build/
+/neural_networks/build/
+/telegram_notifier/build/
+/trading_core/build/
+/trading_desk/build/

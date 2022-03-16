@@ -1,0 +1,3 @@
+rabbitmq-plugins.bat enable rabbitmq_management
+rabbitmqctl.bat add_user admin admin
+rabbitmqctl.bat set_user_tags admin administrator

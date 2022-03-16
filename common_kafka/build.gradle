@@ -1,0 +1,8 @@
+dependencies {
+    compile libraries.kafka_clients
+    compile libraries.kafka_connect_json
+    compile libraries.jackson_databind
+    compile libraries.rxscala
+    
+    compile project(':common_trade')
+}

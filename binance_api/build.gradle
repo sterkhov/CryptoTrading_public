@@ -1,0 +1,6 @@
+dependencies {
+    compile libraries.sttp
+    compile(name: 'binance-java-api-master', ext: 'jar')
+
+    compile project(':telegram_notifier')
+}
